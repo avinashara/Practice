@@ -1,29 +1,114 @@
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+    <html>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Calendar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS3 GRID</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <!-- <script src="main.js"></script> -->
+        <style>
+            .hero {
+                background-color: gray;
+                background-size: cover;
+                padding: 4rem 2rem;
 
-<body>
-    <section class="container">
-        <section class="main-container">
-            <section class="header-container">
-                <input type="button" value="Previous" class="pre" />
-                <span id="header-title"></span>
-                <input type="button" value="Next" class="next" />
-            </section>
-            <section class="header" id="header">
-            </section>
-            <section id="content"></section>
+                display: grid;
+                align-items: center;
+                /* grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); */
+                /* grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 300px 300px; */
+                grid-template-columns: 50px 50px 50px 50px;
+                grid-gap: 10px 10px;
 
+            }
+            article{
+                background-color: blue;
+            }
+
+            .item-a {
+                grid-area: header;
+            }
+
+            .item-b {
+                grid-area: main;
+            }
+
+            .item-c {
+                grid-area: sidebar;
+            }
+
+            .item-d {
+                grid-area: footer;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 50px 50px 50px 50px;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header header header header"
+                    "main main . sidebar"
+                    "footer footer footer footer";
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <section class="hero">
+            <article>
+                <p>Article One</p>
+            </article>
+            <article>
+                <p>Article two</p>
+            </article>
+            <article>
+                <p>Article Three</p>
+            </article>
+            <article>
+                <p>Article Three</p>
+            </article>
+            <article>
+                <p>Article One</p>
+            </article>
+            <article>
+                <p>Article two</p>
+            </article>
+            <article>
+                <p>Article Three</p>
+            </article>
+            <article>
+                <p>Article Three</p>
+            </article>
+            <article>
+                <p>Article One</p>
+            </article>
+            <article>
+                <p>Article two</p>
+            </article>
+            <article>
+                <p>Article Three</p>
+            </article>
+            <!-- <article>
+                <p>Article Three</p>
+            </article> -->
         </section>
-    </section>
-    <script src="main.js"></script>
-</body>
+        <!-- <section class="container">
+            <article >
+                <p>Article One</p>
+            </article>
+            <article>
+                <p>Article two</p>
+            </article>
+            <article>
+                <p>Article Three</p>
+            </article>
+            <article>
+                <p>Article Three</p>
+            </article>
+        </section> -->
+    </body>
 
-</html>
+    </html>
